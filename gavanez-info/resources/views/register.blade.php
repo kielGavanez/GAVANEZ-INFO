@@ -27,16 +27,20 @@
         }
         form input{
             font-size: 20px;
-            text-transform: capitalize;
         }
         a{
             font-size: 20px;
             border: 1px solid black;
-            border-radius: 5px;
-            padding: .5rem;
+            border-radius: 1px;
+            padding: .15rem .3rem;
             background-color: rgb(230   , 230  , 230 );
-            text-decoration: black;
-            text-decoration-color: black;
+            text-decoration: none;        
+        }
+        a:link, a:active, a:visited{
+            color: black;
+        }
+        a:hover{
+            background-color: rgb(164, 255, 255);
         }
         .container{
             padding-top: 150px;
@@ -49,8 +53,8 @@
             <h1>Registration Page</h1>
             @csrf
             <div><input type="text" name="name" id="name" placeholder="Name"></div>
-            <div><input type="email" name="email" id="email" placeholder="email"></div>
-            <div><input type="password" name="password" id="password" placeholder="password"></div>
+            <div><input type="email" name="email" id="email" placeholder="E-mail"></div>
+            <div><input type="password" name="password" id="password" placeholder="Password"></div>
             <div><input type="submit" value="Submit"></div>
             <a href="{{route('login')}}">Login</a>
         </form>

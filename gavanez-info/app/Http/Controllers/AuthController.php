@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use function Laravel\Prompts\alert;
+
 class AuthController extends Controller
 {
     /**
@@ -42,6 +44,8 @@ class AuthController extends Controller
 
         if (Auth::attempt($field)) {
             return redirect()->route('index');  
+        }else{
+            return back();
         }
     }
 
